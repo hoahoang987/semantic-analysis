@@ -3,11 +3,6 @@
 import spacy  # importing spacy
 nlp = spacy.load('en_core_web_md') # specifying the model we want to use. Remember to install this model by typing python -m spacy download en_core_web_md into your command line
 
-# Now we are going to look into longer texts and compare them. 
-# Below we have two lists: one containing complaints submitted to a company, and another of recipes found online.
-# We want to establish how spaCy's model can identify similarities or dissimilarities between complaint and recipes. 
-
-# Make sure to run this example file and read through the explanations.
 
 # Below is a list of six complaints.
 complaints = [ 'We bought a house in  CA. Our mortgage was handled by a company called ki. Soon after the mortgage was sold to ABC. Shortly after that XYZ took over the mortgage. The other day we got a notice not to send our payment to them but to loi instead. This is all so frustrating and wreaks of the  mortgage nightmare.',
@@ -59,7 +54,6 @@ for token in recipes:
         token_ = nlp(token_)
         print(token.similarity(token_))
 
-# What do you observe? Note that the similarity index has reduced from what we observed in the short-text example discussed in the content PDF.
 
 
 # There are several ways to make your model more accurate with the similarity
